@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="person" routerLink="/profile"></ion-icon>
+      <ion-icon name="exit-outline" routerLink="/login"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- cara memanggil component dan di import di file home.module -->
+  <app-about [title]="'About Page'"></app-about>
+
+
+<ion-row class="ion-justify-content-center" *ngFor="let i of [1,2,3,4,5]">
+  <ion-col size="12" size-md="6" size-lg="4" class="ion-text-center">
+    <ion-card class="responsive-card">
+      <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="responsive-img" />
+      <ion-card-header>
+        <ion-card-title>Card Title </ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+</ion-content>
